@@ -1,0 +1,5 @@
+Check                                        Your run  Good target
+Baseline score not at ceiling (>0.99)        0.98144   leaves room
+% chunks clearing noise floor                80%       >50%, ideally 80%+
+% chunks with correct (positive) sign        100%      >70%
+Range of true_marginal_value vs noise floor  0.00038   notably > 0.00015 (2.6x)
