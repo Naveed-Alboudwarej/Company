@@ -5,4 +5,4 @@ __pycache__/
 # Raw data and regenerable pipeline intermediates -- too large for git,
 # and reproducible via data_prep.py given the raw file.
 Data/*.txt
-Trial_One/*.parquet
+Trial_Two/*.parquet
