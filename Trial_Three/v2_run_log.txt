@@ -1,0 +1,45 @@
+[clean] dropped 468 rows containing -999 sentinel values (0.36% of data)
+[chunks] 20 chunks created, sizes range 749-751 rows (mean 750)
+[v2] combined_pool=15750 rows (15000 real + 750 corrupted), leftover for test folds=87926 rows
+[v2] fold 0 done (36s elapsed)
+[v2] fold 1 done (71s elapsed)
+[v2] fold 2 done (105s elapsed)
+[v2] fold 3 done (138s elapsed)
+[v2] fold 4 done (173s elapsed)
+[v2] fold 5 done (209s elapsed)
+[v2] fold 6 done (245s elapsed)
+[v2] fold 7 done (282s elapsed)
+
+=== Final ground truth v2 (sorted by value) ===
+ chunk_id  chunk_size  true_marginal_value  std_across_folds  min_fold_delta  max_fold_delta  reliable  is_corrupted_sanity_check
+     10.0         750             0.002786          0.000881        0.001646        0.004205      True                      False
+     19.0         749             0.002777          0.001139        0.000787        0.004244      True                      False
+      4.0         750             0.002688          0.000907        0.001327        0.003679      True                      False
+      5.0         750             0.002528          0.001009        0.001077        0.004077      True                      False
+     13.0         750             0.002463          0.000922        0.001151        0.003512      True                      False
+      1.0         751             0.002234          0.000893        0.000843        0.003614      True                      False
+     12.0         750             0.002190          0.001226        0.000364        0.003556     False                      False
+      6.0         750             0.002036          0.000978        0.000431        0.003108      True                      False
+      7.0         750             0.002036          0.001106        0.000526        0.004039     False                      False
+     16.0         750             0.002018          0.001162        0.000635        0.003700     False                      False
+     14.0         750             0.001828          0.000710        0.000415        0.002662      True                      False
+     15.0         750             0.001756          0.001124        0.000382        0.003992     False                      False
+     18.0         749             0.001548          0.000827        0.000627        0.003060     False                      False
+      0.0         751             0.001529          0.000857        0.000521        0.003055     False                      False
+      9.0         750             0.001447          0.000640        0.000519        0.002546      True                      False
+      3.0         750             0.001391          0.000374        0.000764        0.001837      True                      False
+     11.0         750             0.001288          0.001025       -0.000531        0.002479     False                      False
+      8.0         750             0.001038          0.000807       -0.000061        0.002321     False                      False
+     17.0         749             0.001025          0.000823        0.000318        0.002343     False                      False
+      2.0         751             0.001015          0.000940        0.000235        0.002581     False                      False
+CORRUPTED         750            -0.009467          0.001539       -0.011179       -0.007145      True                       True
+
+=== Sanity check ===
+Corrupted chunk true_marginal_value: -0.00947
+Real chunks range: 0.00101 to 0.00279
+Corrupted chunk clearly stands out above real chunks: False
+
+Sign consistency (real chunks only): 158/160 positive
+Reliable chunks (low fold-to-fold variance): 11/21
+
+Wrote loo_ground_truth_v2.csv and multi_fold_raw_deltas_v2.csv
